@@ -4,8 +4,8 @@ package com.test.factory;
 //если необходимо получить несколько объектов одного типа
 public class Factory {
     public static void main(String[] args) {
-        Car kalina = FactoryFabric.createCar("com.test.factory.Kalina");
-        Car oka = FactoryFabric.createCar("com.test.factory.Oka");
+        Car kalina = FactoryFabric.createCar("Kalina");
+        Car oka = FactoryFabric.createCar("Oka");
         kalina.drive();
         oka.drive();
     }
@@ -18,20 +18,20 @@ interface Car{
 class Kalina implements Car{
     @Override
     public void drive() {
-        System.out.println("com.test.factory.Kalina dirve");
+        System.out.println("Kalina dirve");
     }
 }
 class Oka implements Car{
     @Override
     public void drive() {
-        System.out.println("com.test.factory.Oka dirve");
+        System.out.println("Oka dirve");
     }
 }
 class FactoryFabric{
     public static Car createCar(String nameOfCar){
         switch (nameOfCar){
-            case "com.test.factory.Kalina": return new Kalina();
-            case "com.test.factory.Oka": return new Oka();
+            case "Kalina": return new Kalina();
+            case "Oka": return new Oka();
             default:return  null;
         }
     }
