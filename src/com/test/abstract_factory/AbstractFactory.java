@@ -1,4 +1,4 @@
-package com.test;
+package com.test.abstract_factory;
 //АБСТРАКТНАЯ ФАБРИКА - ABSTRACT FACTORY (фабрика, которая создает другие фабрики)
 public class AbstractFactory {
     public static void main(String[] args) {
