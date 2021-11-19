@@ -11,28 +11,33 @@ public class Factory {
     }
 }
 
-interface Car{
+interface Car {
     void drive();
 }
 
-class Kalina implements Car{
+class Kalina implements Car {
     @Override
     public void drive() {
         System.out.println("Kalina dirve");
     }
 }
-class Oka implements Car{
+
+class Oka implements Car {
     @Override
     public void drive() {
         System.out.println("Oka dirve");
     }
 }
-class FactoryFabric{
-    public static Car createCar(String nameOfCar){
-        switch (nameOfCar){
-            case "Kalina": return new Kalina();
-            case "Oka": return new Oka();
-            default:return  null;
+
+class FactoryFabric {
+    public static Car createCar(String nameOfCar) {
+        switch (nameOfCar) {
+            case "Kalina":
+                return new Kalina();
+            case "Oka":
+                return new Oka();
+            default:
+                return null;
         }
     }
 }
