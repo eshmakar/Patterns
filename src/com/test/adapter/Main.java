@@ -27,7 +27,7 @@ class Man implements Track{
         System.out.println("Man cleaning..."); }}
 
 class TrackWrap implements Car{
-    private Track track;
+    private final Track track;
 
     public TrackWrap(Track track) {
         this.track = track;
